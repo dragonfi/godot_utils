@@ -1,6 +1,15 @@
 tool
 extends Node2D
 
+# Load png images from a directory.
+
+# Add this script to a scene root, fill in sprite_dir and cell_size,
+# then use Scene/Convert to.../Tileset... as usual.
+# Tile origin will be set to the bottom right corner.
+
+# scene_grid is an optional setting that spaces grid elemens in the scene
+# for easier viewing.
+
 export(String, DIR) var sprite_dir setget __set_sprite_dir
 export(Vector2) var scene_grid = Vector2(64, 64) setget __set_scene_grid
 export(Vector2) var cell_size = Vector2(64, 64) setget __set_cell_size
