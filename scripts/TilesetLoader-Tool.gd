@@ -5,10 +5,6 @@ export(String, DIR) var sprite_dir setget __set_sprite_dir
 export(Vector2) var scene_grid = Vector2(64, 64) setget __set_scene_grid
 export(Vector2) var cell_size = Vector2(64, 64) setget __set_cell_size
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 func __set_scene_grid(value):
 	scene_grid = value
 	var offset = Vector2(0, 0)
@@ -73,6 +69,8 @@ func list_dir(path):
 		print("An error occurred when trying to access the path.")
 		return null
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _ready():
+	pass
+
 #func _process(delta):
 #	pass
